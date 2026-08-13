@@ -32,6 +32,28 @@ void insertEnd(struct Node** head, int data){
 
 }
 
+void insertAfter(struct Node** head,int target, int data){
+    if (*head == NULL){
+        printf("EMPTY\n");
+        return;
+    }
+
+    struct Node* temp = *head;
+    while(temp != NULL && temp->data != target){
+        temp = temp->next;
+    }
+
+    if (temp == NULL){
+        printf("Target not found\n");
+        return;
+    }
+
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = temp->next;
+    temp->next = newNode;
+}
+
 void deleteBegin(struct Node** head){
     if (*head == NULL){
         printf("EMPTY\n");
@@ -135,6 +157,10 @@ int main(){
     printf("After inserting at end:\n");
     display(head);
 
+    insertAfter(&head, 3000, 250000);
+    printf("After inserting after 200:\n");
+    display(head);
+
     // deleteBegin(&head);
     // printf("After deleting at front:\n");
     // display(head);
@@ -147,7 +173,7 @@ int main(){
     //  printf("After deleting node 40:\n");
     // display(head);
 
-    reverse(&head);
-    display(head);
+    // reverse(&head);
+    // display(head);
     
 }
