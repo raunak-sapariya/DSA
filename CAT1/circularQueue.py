@@ -1,0 +1,63 @@
+class circularQueue:
+    def __init__(self, size):
+        self.size = size
+        self.queue = [None] * size
+        self.head = self.tail = -1
+
+    def enqueue(self, data):
+        if ((self.tail+1)%self.size == self.head):
+            print("Full")
+        elif (self.head == -1):
+            self.head = self.tail = 0
+            self.queue[self.tail]=data
+        else:
+            self.tail = (self.tail+1)%self.size
+            self.queue[self.tail] = data
+
+    def dequeue(self):
+        if (self.head == -1):
+            print("Empty")
+        elif (self.head == self.tail):
+            temp = self.queue[self.head]
+            self.head = -1
+            self.tail = -1
+            return temp
+        else:
+            temp = self.queue[self.head]
+            self.head = (self.head+1)%self.size
+            return temp
+
+    def display(self):
+        if (self.head == -1):
+            print("No element")
+
+        elif (self.tail >= self.head):
+            for i in range(self.head, self.tail + 1):
+                print(self.queue[i], end=" ")
+            print()
+        else:
+            for i in range(self.head, self.size):
+                print(self.queue[i], end=" ")
+            for i in range(0, self.tail + 1):
+                print(self.queue[i], end=" ")
+            print()
+        
+        
+
+q = circularQueue(5)
+q.enqueue(1)      
+q.enqueue(2)      
+q.enqueue(3)     
+q.enqueue(4)     
+q.enqueue(5)     
+q.display()
+
+q.dequeue()
+q.display()
+
+q.enqueue(6)
+q.display()
+
+q.dequeue()
+q.display()
+
