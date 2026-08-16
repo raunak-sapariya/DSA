@@ -4,13 +4,13 @@ public class blockSwap {
     static void leftRotate(int[] arr, int d) {
         int n = arr.length;
         d = d % n; // In case d is greater than n
-        reverse(arr, 0, d - 1);
-        reverse(arr, d, n - 1);
+        reverse(arr, 0, n - d - 1);
+        reverse(arr, n - d, n - 1);
         reverse(arr, 0, n - 1);
     }
 
     static void reverse(int[] arr, int start, int end) {
-        while (start < end) {
+        while (start <= end) {
             int temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
