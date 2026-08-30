@@ -5,18 +5,18 @@ struct Node {
     int coeff;
     int pow;
     struct Node* next;
-} *head = NULL, *tail = NULL;
+} *head = NULL, *tail = NULL, *newNode = NULL, *temp = NULL;
 
 struct Node* creatNode(int coeff, int pow){
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->coeff = coeff;
     newNode->pow = pow;
     newNode->next = NULL;
     return newNode;
 }
 
-void insertAtEnd(struct Node** head,struct Node** tail, int coeff, int pow){
-    struct Node* newNode = creatNode(coeff, pow);
+void insertAtEnd(struct Node** head, struct Node** tail, int coeff, int pow){
+    newNode = creatNode(coeff, pow);
 
     if (*head == NULL){
         *head = newNode;
