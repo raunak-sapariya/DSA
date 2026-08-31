@@ -127,6 +127,36 @@ void display(struct Node* head){
     printf("NULL\n");
 }
 
+void rotateRight(struct Node** head, int k){
+    if (head == NULL || (*head)->next == NULL || k <= 0) {
+        return;
+    }
+
+    int len = 1 ;
+    struct Node* tail = *head;
+    while (tail->next != NULL) {
+        tail = tail->next;
+        len++;
+    }
+
+    k = k % len;
+    if (k == 0) {
+        return;
+    }
+
+    int rotate = len - k;
+
+    struct Node* curr = *head;
+    for (int i = 1; i < rotate; i++) {
+        curr = curr->next;
+    }
+
+    struct Node* newHead = curr->next;
+    curr->next = NULL;
+    tail->next = *head;
+    *head = newHead;
+}
+
 void reverse(struct Node** head){
     struct Node* prev = NULL;
     struct Node* curr = *head;
@@ -160,6 +190,10 @@ int main(){
     insertAfter(&head, 3000, 250000);
     printf("After inserting after 200:\n");
     display(head);
+
+    rotateRight(&head, 2);
+    display(head);
+
 
     // deleteBegin(&head);
     // printf("After deleting at front:\n");
