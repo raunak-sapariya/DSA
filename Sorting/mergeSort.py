@@ -1,3 +1,10 @@
+"""
+Time Complexity: O(n log n) in all cases (best, average, worst)
+Space Complexity:
+    O(n) Temporary array
+    O(log n) Recursive stack space
+"""
+
 def merge(arr, low, mid, high):
     # print("Merging subarrays:", arr[low:mid + 1], "and", arr[mid + 1:high + 1])
     # print("Low:", low, "Mid:", mid, "High:", high)

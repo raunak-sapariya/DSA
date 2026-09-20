@@ -1,3 +1,10 @@
+"""
+Time Complexity:
+    Best Case: O(n) when the array is already sorted
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
+Space Complexity: O(1)
+"""
 def insertionSort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
