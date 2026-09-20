@@ -37,6 +37,15 @@ Data Structures & Algorithms coursework, organised by topic. Python/C implementa
 | Array stored in Linked List   | Go       | [GO/LinkedList/ArrayInLinkedList.go](GO/LinkedList/ArrayInLinkedList.go) |
 | 2D Array in Linked List       | Go       | [GO/LinkedList/TwodArrayLinkedList.go](GO/LinkedList/TwodArrayLinkedList.go) |
 
+## Tree
+
+| Structure / Traversal | Language | File |
+|------------------------|----------|------|
+| Binary Search Tree (array representation) | Python | [Tree/BSTArray.py](Tree/BSTArray.py) |
+| Binary Search Tree (linked, in/pre/post-order) | C | [Tree/BSTLinkedList.c](Tree/BSTLinkedList.c) |
+| Breadth-First Search (adjacency matrix) | Python | [Tree/BFS.py](Tree/BFS.py) |
+| Depth-First Search (adjacency matrix) | Python | [Tree/DFS.py](Tree/DFS.py) |
+
 ## Queue
 
 | Type           | Language | Operations                     | File |
@@ -59,6 +68,9 @@ Data Structures & Algorithms coursework, organised by topic. Python/C implementa
 |------------------------------|------|
 | Block Swap Array Rotation    | [CC_JAVA/blockSwap.java](CC_JAVA/blockSwap.java) |
 | Singly Linked List           | [CC_JAVA/singly.java](CC_JAVA/singly.java) |
+| Queue using Stack            | [CC_JAVA/QueueUsingStack.java](CC_JAVA/QueueUsingStack.java) |
+| Stack using Queue            | [CC_JAVA/StackUsingQueue.java](CC_JAVA/StackUsingQueue.java) |
+| Min Stack (O(1) getMin)      | [CC_JAVA/minStack.java](CC_JAVA/minStack.java) |
 
 ## GO / Assessments
 
