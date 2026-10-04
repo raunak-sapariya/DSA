@@ -4,10 +4,10 @@ public class evaluateRPN {
     static int RPN(String[] tokens){
         Stack<Integer> st = new Stack<>();
         for (String tocken : tokens) {
-            if(tocken.equals("+")) st.add(st.pop() + st.pop());
-            else if(tocken.equals("-")) st.add(st.pop() - st.pop());
-            else if(tocken.equals("*")) st.add((int)st.pop() * (int)st.pop());
-            else if(tocken.equals("/"))st.add((int)st.pop() / (int)st.pop());
+            if(tocken.equals("+")) st.push(st.pop() + st.pop());
+            else if(tocken.equals("-")) st.push(st.pop() - st.pop());
+            else if(tocken.equals("*")) st.push((int)st.pop() * (int)st.pop());
+            else if(tocken.equals("/"))st.push((int) (int)st.pop() / (int)st.pop());
             else st.push(Integer.parseInt(tocken));
         }
         return st.pop();
