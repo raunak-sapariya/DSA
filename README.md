@@ -19,6 +19,7 @@ Data Structures & Algorithms coursework, organised by topic. Python/C implementa
 | Merge Sort     | Python   | [Sorting/mergeSort.py](Sorting/mergeSort.py) |
 | Shell Sort     | Python   | [Sorting/shellSort.py](Sorting/shellSort.py) |
 | Radix Sort     | Python   | [Sorting/radixSort.py](Sorting/radixSort.py) |
+| Heap Sort      | Python   | [Sorting/heapSort.py](Sorting/heapSort.py) |
 
 ## Linked List
 
@@ -71,6 +72,13 @@ Data Structures & Algorithms coursework, organised by topic. Python/C implementa
 | Queue using Stack            | [CC_JAVA/QueueUsingStack.java](CC_JAVA/QueueUsingStack.java) |
 | Stack using Queue            | [CC_JAVA/StackUsingQueue.java](CC_JAVA/StackUsingQueue.java) |
 | Min Stack (O(1) getMin)      | [CC_JAVA/minStack.java](CC_JAVA/minStack.java) |
+| Add Two Numbers (linked list)| [CC_JAVA/addTwoNumbers.java](CC_JAVA/addTwoNumbers.java) |
+| Partition List (linked list) | [CC_JAVA/partitionlist.java](CC_JAVA/partitionlist.java) |
+| Valid Parentheses            | [CC_JAVA/validParentheses.java](CC_JAVA/validParentheses.java) |
+| Valid Parenthesis String (with `*`) | [CC_JAVA/validParenthesesString.java](CC_JAVA/validParenthesesString.java) |
+| Evaluate Reverse Polish Notation | [CC_JAVA/evaluateRPN.java](CC_JAVA/evaluateRPN.java) |
+| Validate Stack Sequences     | [CC_JAVA/validateStackSequences.java](CC_JAVA/validateStackSequences.java) |
+| Basic Calculator             | [CC_JAVA/Basic_calculator.java](CC_JAVA/Basic_calculator.java) |
 
 ## GO / Assessments
 
