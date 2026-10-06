@@ -26,19 +26,14 @@ struct BinaryTree* insert(struct BinaryTree* root, int value){
     return root;
 }
 
-// void displayLikeTree(struct BinaryTree* root, int space){
-//     if (root == NULL){
-//         return;
-//     }
-//     space += 5;
-//     displayLikeTree(root->left, space);
-//     printf("\n");
-//     for (int i = 5; i < space; i++){
-//         printf(" ");
-//     }
-//     printf("%d\n", root->data);
-//     displayLikeTree(root->right, space);
-// }
+void display(struct BinaryTree* root){
+    if (root == NULL){
+        return;
+    }
+    display(root->left);
+    printf("%d ", root->data);
+    display(root->right);
+}
 
 void displayInOrder(struct BinaryTree* root){
     if (root == NULL){
@@ -65,6 +60,28 @@ void displayPostOrder(struct BinaryTree* root){
     displayPostOrder(root->left);
     displayPostOrder(root->right);
     printf("%d ", root->data);
+}
+
+void displayLevelOrder(struct BinaryTree* root){
+    if (root == NULL){
+        return;
+    }
+    struct BinaryTree* queue[100];
+    int front = 0, rear = 0;
+
+    queue[rear++] = root;
+
+    while (front < rear){
+        struct BinaryTree* current = queue[front++];
+        printf("%d ", current->data);
+
+        if (current->left != NULL){
+            queue[rear++] = current->left;
+        }
+        if (current->right != NULL){
+            queue[rear++] = current->right;
+        }
+    }
 }
 
 int main() {

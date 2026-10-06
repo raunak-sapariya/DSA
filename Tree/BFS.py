@@ -28,3 +28,19 @@ if 0 <= start < n:
 else:
 	print("Invalid starting vertex")
 
+"""
+Breadth-First Search (BFS) implementation for a graph.
+input: number of vertices, adjacency matrix, and starting vertex.
+
+Example input:
+Enter number of vertices: 5
+Enter adjacency matrix:
+0 1 1 0 0
+0 0 1 1 0
+0 0 0 1 1
+0 0 0 0 1
+Enter starting vertex (0-4): 0
+output:
+BFS Traversal: 0 1 2 3 4
+"""
+

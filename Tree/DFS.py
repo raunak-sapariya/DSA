@@ -23,3 +23,16 @@ print(graph)
 visited = [False] * n
 print("DFS traversal starting from vertex 0:")
 dfs(graph, visited, 0)
+
+"""
+input:
+Enter the number of vertices: 5
+Enter the adjacency row 0 (5 values): 0 1 1 0 0
+Enter the adjacency row 1 (5 values): 1 0 0 1 1
+Enter the adjacency row 2 (5 values): 1 0 0 0 1
+Enter the adjacency row 3 (5 values): 0 1 0 0 0
+Enter the adjacency row 4 (5 values): 0 1 1 0 0
+output:
+DFS traversal starting from vertex 0:
+0 1 3 4 2
+"""

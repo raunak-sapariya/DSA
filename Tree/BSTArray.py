@@ -30,6 +30,35 @@ class BinaryTree:
         for index, value in enumerate(self.tree):
             print(f"[{index}] {value}" if value is not None else "-", end = " ")
 
+    def display_inorder(self, index=0):
+        if index >= self.capacity or self.tree[index] is None:
+            return
+        self.display_inorder(2 * index + 1)  # Left child
+        print(self.tree[index], end=" ")
+        self.display_inorder(2 * index + 2)  # Right child
+
+    def display_preorder(self, index=0):
+        if index >= self.capacity or self.tree[index] is None:
+            return
+        print(self.tree[index], end=" ")
+        self.display_preorder(2 * index + 1)  # Left child
+        self.display_preorder(2 * index + 2)  # Right child
+
+    def display_postorder(self, index=0):
+        if index >= self.capacity or self.tree[index] is None:
+            return
+        self.display_postorder(2 * index + 1)  # Left child
+        self.display_postorder(2 * index + 2)  # Right child
+        print(self.tree[index], end=" ")
+
+    def display_level_order(self):
+        print("Level Order Traversal:")
+        for value in self.tree:
+            if value is not None:
+                print(value, end=" ")
+        print()
+        
+
 
 if __name__ == "__main__":
     bt = BinaryTree(15)
